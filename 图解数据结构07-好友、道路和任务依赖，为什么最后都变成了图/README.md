@@ -17,41 +17,8 @@ cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 \
   graph_demo.c -o graph_demo
 ./graph_demo
 ```
-#  07“”
 
- C11 
- 
- -
- - - Tarjan
-   - - KruskalPrim
-     - -
-       - - DijkstraBellman-FordFloyd-Warshall
-         - - Kahn  AOE
-           - -  Hopcroft-Karp
-             -
-             -  ##
-             -
-             -  ```bash
-                cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 \
-                  graph_demo.c -o graph_demo
-                ./graph_demo
-                ```
-
-                 AddressSanitizer  UndefinedBehaviorSanitizer
-
-                ```bash
-                cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O1 -g \
-                  -fsanitize=address,undefined -fno-omit-frame-pointer \
-                  graph_demo.c -o graph_demo_sanitize
-                ./graph_demo_sanitize
-                ```
-
-
-
-                ```text
-                All graph tests passed.
-                ```
-                使用 AddressSanitizer 与 UndefinedBehaviorSanitizer 检查：
+使用 AddressSanitizer 与 UndefinedBehaviorSanitizer 检查：
 
 ```bash
 cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O1 -g \
